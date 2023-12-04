@@ -1,4 +1,4 @@
-name: "🚀 Publish on npm"
+name: "Test on PR"
 
 on:
   pull_request:
@@ -7,7 +7,7 @@ on:
 
 jobs:
   release:
-    name: 🚀 release
+    name: Test on PR
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
