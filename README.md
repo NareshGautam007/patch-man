@@ -41,25 +41,13 @@ Integrate Patch-Man into your project's routes directory. Call `awsSES(error)` w
 
 **Note:** Replace the repository name (`sample_project`) with your own repository. The repository provided is for demonstration purposes only.
 
-# <<<<<<< HEAD
-
-> > > > > > > main
-
 ## Installation
 
 ```javascript
 const patch-hman = require('patch-man')
 ```
 
-<<<<<<< HEAD
-
 ### Sample code
-
-=======
-
-### Sample code
-
-> > > > > > > main
 
 ```javascript
 try {
@@ -69,11 +57,4 @@ try {
   // Using patch-man function to report the error
   patchMan.awsSES(error);
 }
-<<<<<<< HEAD
-```
-
-=======
-
-```
->>>>>>> main
 ```
