@@ -1,22 +1,20 @@
 const express = require("express");
+const cors = require("cors");
 const { awsSES } = require("..");
-const app = express();
-const port = 3000;
 
-app.get("/", (req, res) => {
+const app = express();
+app.use(cors());
+
+app.get("/", async (req, res) => {
     try {
-        awsSES(error)
-        return res.json({message: "Success"})
-        throw new error;
-        
+        awsSES(error);
+        throw new error();
+        return res.json({ message: "Success" });  // Doesn't execute
     } catch (error) {
-        //awsSES(error)
-        console.error(error)
+        // console.error(error);
+        const mailSent = await awsSES(error);
+        return res.status(500).json({ message: "Error", mailSent: mailSent });
     }
 });
 
-// app.listen(port, () => {
-//     console.log(`Example app listening on port ${port}`);
-// });
-
-module.exports.app =app
+module.exports.app = app;
