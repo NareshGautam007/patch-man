@@ -3,6 +3,10 @@ const dotenv = require("dotenv");
 
 dotenv.config();
 
+/**
+ * Sends an email using AWS SES.
+ * @param {Error} error - The error object to include in the email body.
+ */
 const awsSES = async (error) => {
   AWS.config.update({
     region: process.env.AWS_REGION,
