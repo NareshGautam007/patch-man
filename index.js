@@ -1,3 +1,7 @@
+/**
+ * Sends an email using AWS SES.
+ * @param {Error} error - The error object to include in the email body.
+ */
 function awsSES(error) {
     
     // Import AWS SD
